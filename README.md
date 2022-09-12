@@ -29,24 +29,25 @@ dx --dex --output=./bin/classes.dex ./obj
 # generate apk file
 aapt package -f -m -F ./bin/unaligned.apk -M ./AndroidManifest.xml -S ./res -I /opt/android-sdk/platforms/android-31/android.jar
 
-# You have to copy the classes.dex file at the root of project Otherwise, AAPT won’t put this file at right place in the APK archive (because an APK is like a .zip file)
-cp ./bin/classes.dex .
-aapt add ./bin/unaligned.apk classes.dex
+# You have to cd to bin directory Otherwise, AAPT won’t put this file at right place in the APK archive (because an APK is like a .zip file)
+cd ./bin
+aapt add unaligned.apk classes.dex
 
 # check the apk file
 aapt list ./bin/unaligned.apk
+```
+
+# align the package
+```shell
+# Alignment increase the performance of the application and may reduce memory use.
+zipalign -f 4 ./bin/unaligned.apk ./bin/aligned.apk
 ```
 
 # sign the package
 ```shell
 keytool -genkeypair -validity 365 -keystore release.keystore -keyalg RSA -keysize 2048
 
-apksigner sign --ks release.keystore ./bin/unaligned.apk
-```
-# align the package
-```shell
-# Alignment increase the performance of the application and may reduce memory use.
-zipalign -f 4 ./bin/unaligned.apk ./bin/app.apk
+apksigner sign --ks release.keystore -v1-signing-enabled true -v2-signing-enabled true --out ./bin/app.apk ./bin/aligned.apk
 ```
 
 # other files
@@ -70,3 +71,7 @@ shell script to build this app
 * java.io.FileNotFoundException: ./bin/classes.dex
 
 	create bin folder for dx to put classes.dex
+
+* why folder structure com/jumhorn/app
+
+	default android folder structure which is domain reversed
