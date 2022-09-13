@@ -16,7 +16,7 @@ aapt package -f -m -J ./src -M ./AndroidManifest.xml -S ./res -I /opt/android-sd
 ## compile the .java files
 ```shell
 # compile .class file to obj folder
-javac -source 1.7 -target 1.7 -d obj -classpath ./src -bootclasspath /opt/android-sdk/platforms/android-31/android.jar src/com/android/app/*.java
+javac -source 1.7 -target 1.7 -d obj -classpath ./src -bootclasspath /opt/android-sdk/platforms/android-31/android.jar src/com/jumhorn/app/*.java
 ```
 
 ## translate .class to classes.dex
