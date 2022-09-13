@@ -37,13 +37,13 @@ aapt add unaligned.apk classes.dex
 aapt list ./bin/unaligned.apk
 ```
 
-# align the package
+## align the package
 ```shell
 # Alignment increase the performance of the application and may reduce memory use.
 zipalign -f 4 ./bin/unaligned.apk ./bin/aligned.apk
 ```
 
-# sign the package
+## sign the package
 ```shell
 keytool -genkeypair -validity 365 -keystore release.keystore -keyalg RSA -keysize 2048
 
