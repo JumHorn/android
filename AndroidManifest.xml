@@ -1,7 +1,7 @@
 <?xml version='1.0'?>
-<manifest xmlns:a='http://schemas.android.com/apk/res/android' package='com.android.app' a:versionCode='0' a:versionName='0'>
-    <application a:label='Hello Android'>
-        <activity a:name='com.android.app.MainActivity'>
+<manifest xmlns:a='http://schemas.android.com/apk/res/android' package='com.jumhorn.app' a:versionCode='0' a:versionName='0'>
+    <application a:label='app name'>
+        <activity a:name='com.jumhorn.app.MainActivity'>
              <intent-filter>
                 <category a:name='android.intent.category.LAUNCHER'/>
                 <action a:name='android.intent.action.MAIN'/>

@@ -1,4 +1,4 @@
-package com.android.app;
+package com.jumhorn.app;
 
 import android.app.Activity;
 import android.os.Bundle;
