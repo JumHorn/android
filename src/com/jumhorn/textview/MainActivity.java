@@ -1,5 +1,6 @@
 package com.jumhorn.textview;
 
+import com.jumhorn.R;
 import android.app.Activity;
 import android.os.Bundle;
 

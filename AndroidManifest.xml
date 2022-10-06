@@ -5,14 +5,14 @@
 
 	<application a:label='app name'>
 
-		<activity a:name='.webview.MainActivity'>
+		<activity a:name='com.jumhorn.webview.MainActivity'>
 			 <intent-filter>
 				<category a:name='android.intent.category.LAUNCHER'/>
 				<action a:name='android.intent.action.MAIN'/>
 			 </intent-filter>
 		</activity>
 
-		<activity a:name='.textview.MainActivity'>
+		<activity a:name='com.jumhorn.textview.MainActivity'>
 			<intent-filter>
 				<category a:name='android.intent.category.DEFAULT'/>
 			</intent-filter>
