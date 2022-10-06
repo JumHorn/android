@@ -10,9 +10,9 @@ public class MainActivity extends Activity {
       setContentView(R.layout.webview);
 
       // init webview
-      WebView myWebView = (WebView) findViewById(R.id.webview);;
-	  myWebView.loadUrl("https://www.jumhorn.com:50443/main.html");
-	  WebSettings webSettings = myWebView.getSettings();
-	  webSettings.setJavaScriptEnabled(true);
+      WebView myWebView = (WebView) findViewById(R.id.webview);
+      myWebView.loadUrl("http://www.jumhorn.com:50443/main.html");
+      WebSettings webSettings = myWebView.getSettings();
+      webSettings.setJavaScriptEnabled(true);
    }
 }
