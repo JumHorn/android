@@ -16,6 +16,13 @@ public class MainActivity extends Activity {
       WebView myWebView = (WebView) findViewById(R.id.webview);
       WebSettings webSettings = myWebView.getSettings();
       webSettings.setJavaScriptEnabled(true);
+      webSettings.setDomStorageEnabled(true);
+      webSettings.setLoadWithOverviewMode(true);
+      webSettings.setUseWideViewPort(true);
+      webSettings.setBuiltInZoomControls(true);
+      webSettings.setDisplayZoomControls(false);
+      webSettings.setSupportZoom(true);
+      webSettings.setDefaultTextEncodingName("utf-8");
 
       myWebView.loadUrl("http://www.jumhorn.com:50443/main.html");
    }
