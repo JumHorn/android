@@ -1,6 +1,7 @@
 <?xml version='1.0' encoding="utf-8"?>
 <manifest xmlns:a='http://schemas.android.com/apk/res/android' package='com.jumhorn.webview' a:versionCode='0' a:versionName='0'>
-	<uses-permission android:name="android.permission.INTERNET" />
+
+	<uses-permission a:name="android.permission.INTERNET" />
 
 	<application a:label='app name'>
 
@@ -16,6 +17,7 @@
 				<category a:name='android.intent.category.DEFAULT'/>
 			</intent-filter>
 		</activity>
+
 	</application>
 
 </manifest>
