@@ -2,6 +2,8 @@ package com.jumhorn.webview;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.webkit.WebView;
+import android.webkit.WebSettings;
 
 public class MainActivity extends Activity {
    @Override
