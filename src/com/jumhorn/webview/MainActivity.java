@@ -14,8 +14,9 @@ public class MainActivity extends Activity {
 
       // init webview
       WebView myWebView = (WebView) findViewById(R.id.webview);
-      myWebView.loadUrl("http://www.jumhorn.com:50443/main.html");
       WebSettings webSettings = myWebView.getSettings();
       webSettings.setJavaScriptEnabled(true);
+
+      myWebView.loadUrl("http://www.jumhorn.com:50443/main.html");
    }
 }
