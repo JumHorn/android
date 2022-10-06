@@ -1,11 +1,21 @@
-<?xml version='1.0'?>
-<manifest xmlns:a='http://schemas.android.com/apk/res/android' package='com.jumhorn.app' a:versionCode='0' a:versionName='0'>
-    <application a:label='app name'>
-        <activity a:name='com.jumhorn.app.MainActivity'>
-             <intent-filter>
-                <category a:name='android.intent.category.LAUNCHER'/>
-                <action a:name='android.intent.action.MAIN'/>
-             </intent-filter>
-        </activity>
-    </application>
+<?xml version='1.0' encoding="utf-8"?>
+<manifest xmlns:a='http://schemas.android.com/apk/res/android' package='com.jumhorn.webview' a:versionCode='0' a:versionName='0'>
+	<uses-permission android:name="android.permission.INTERNET" />
+
+	<application a:label='app name'>
+
+		<activity a:name='com.jumhorn.webview.MainActivity'>
+			 <intent-filter>
+				<category a:name='android.intent.category.LAUNCHER'/>
+				<action a:name='android.intent.action.MAIN'/>
+			 </intent-filter>
+		</activity>
+
+		<activity a:name='com.jumhorn.textview.MainActivity'>
+			<intent-filter>
+				<category a:name='android.intent.category.DEFAULT'/>
+			</intent-filter>
+		</activity>
+	</application>
+
 </manifest>
