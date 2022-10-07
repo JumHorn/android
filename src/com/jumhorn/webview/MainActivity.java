@@ -1,7 +1,6 @@
 package com.jumhorn.webview;
 
 import com.jumhorn.R;
-import com.jumhorn.WebAppInterface;
 import android.app.Activity;
 import android.os.Bundle;
 import android.webkit.WebView;
