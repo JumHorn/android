@@ -1,5 +1,8 @@
+package com.jumhorn.webview;
+
 import android.content.Context;
 import android.widget.Toast;
+import android.webkit.JavascriptInterface;
 
 public class WebAppInterface {
     Context mContext;

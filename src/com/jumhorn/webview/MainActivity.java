@@ -1,7 +1,7 @@
 package com.jumhorn.webview;
 
 import com.jumhorn.R;
-import com.jumhorn.webview.WebAppInterface;
+import com.jumhorn.WebAppInterface;
 import android.app.Activity;
 import android.os.Bundle;
 import android.webkit.WebView;
@@ -27,7 +27,7 @@ public class MainActivity extends Activity {
       webSettings.setDefaultTextEncodingName("utf-8");
 
       webView.setWebViewClient(new WebViewClient());
-	  webView.addJavascriptInterface(new WebAppInterface(this), "Android");
+      webView.addJavascriptInterface(new WebAppInterface(this), "Android");
       webView.loadUrl("http://www.jumhorn.com:50443/main.html");
    }
 }
