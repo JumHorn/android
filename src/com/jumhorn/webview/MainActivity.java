@@ -1,6 +1,7 @@
 package com.jumhorn.webview;
 
 import com.jumhorn.R;
+import com.jumhorn.webview.WebAppInterface;
 import android.app.Activity;
 import android.os.Bundle;
 import android.webkit.WebView;
@@ -14,8 +15,8 @@ public class MainActivity extends Activity {
       setContentView(R.layout.webview);
 
       // init webview
-      WebView myWebView = (WebView) findViewById(R.id.webview);
-      WebSettings webSettings = myWebView.getSettings();
+      WebView webView = (WebView) findViewById(R.id.webview);
+      WebSettings webSettings = webView.getSettings();
       webSettings.setJavaScriptEnabled(true);
       webSettings.setDomStorageEnabled(true);
       webSettings.setLoadWithOverviewMode(true);
@@ -25,7 +26,8 @@ public class MainActivity extends Activity {
       webSettings.setSupportZoom(true);
       webSettings.setDefaultTextEncodingName("utf-8");
 
-      myWebView.setWebViewClient(new WebViewClient());
-      myWebView.loadUrl("http://www.jumhorn.com:50443/main.html");
+      webView.setWebViewClient(new WebViewClient());
+	  webView.addJavascriptInterface(new WebAppInterface(this), "Android");
+      webView.loadUrl("http://www.jumhorn.com:50443/main.html");
    }
 }
