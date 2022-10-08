@@ -59,8 +59,9 @@ shell script to build this app
 # roadmap
 
 - [x] step by step build this app
-- [ ] use webview to embed website
-- [ ] expose android api to javascript
+- [x] use webview to embed website
+- [x] expose android api to javascript
+- [ ] add android accessibility mode api
 
 # FAQ
 
